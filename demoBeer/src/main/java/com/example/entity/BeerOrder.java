@@ -57,15 +57,4 @@ public class BeerOrder {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
-    @Override
-    public String toString() {
-        return "BeerOrder{" +
-                "orderId=" + orderId +
-                ", customerId=" + customerId +
-                ", customerName='" + customerName + '\'' +
-                ", beerName='" + beerName + '\'' +
-                ", quantity=" + quantity +
-                '}';
-    }
 }

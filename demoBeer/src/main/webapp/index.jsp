@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>Beer Orders</title>
+    <meta charset="UTF-8">
     <style>
         table {
             border-collapse: collapse;
@@ -30,9 +31,25 @@
         h2 {
             text-align: center;
         }
+
+        .success {
+            color: green;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
+<!-- Thông báo thành công -->
+<c:if test="${param.success == 'create'}">
+    <p class="success">Thêm order thành công!</p>
+</c:if>
+<c:if test="${param.success == 'update'}">
+    <p class="success">Cập nhật order thành công!</p>
+</c:if>
+<c:if test="${param.success == 'delete'}">
+    <p class="success">Xóa order thành công!</p>
+</c:if>
+
 <h2>Danh sách Beer Orders</h2>
 <table>
     <thead>
