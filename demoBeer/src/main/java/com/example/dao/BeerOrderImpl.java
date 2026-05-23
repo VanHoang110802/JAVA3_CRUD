@@ -11,13 +11,13 @@ import java.util.List;
 
 public class BeerOrderImpl implements BeerOrderDAO {
     @Override
-    public List<BeerOrder> getAll() {
-        List<BeerOrder> list = new ArrayList<>();
+    public List<BeerOrder> getAll(){
+        ArrayList<BeerOrder> list = new ArrayList<>();
         String sql = "SELECT orderId, customerId, customerName, beerName, quantity FROM BeerOrder";
         try (Connection conn = DBConnect.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
-            while (rs.next()) {
+             ResultSet rs = ps.executeQuery()){
+            while(rs.next()){
                 BeerOrder o = new BeerOrder();
                 o.setOrderId(rs.getInt("orderId"));
                 o.setCustomerId(rs.getInt("customerId"));
@@ -26,7 +26,7 @@ public class BeerOrderImpl implements BeerOrderDAO {
                 o.setQuantity(rs.getInt("quantity"));
                 list.add(o);
             }
-        } catch (Exception e) {
+        } catch (Exception e){
             e.printStackTrace();
         }
         return list;

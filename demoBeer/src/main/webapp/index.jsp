@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Hoang
-  Date: 5/19/2026
-  Time: 10:04 AM
+  Date: 5/22/2026
+  Time: 10:02 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -12,7 +12,7 @@
     <title>Beer Orders</title>
     <meta charset="UTF-8">
     <style>
-        table {
+        table{
             border-collapse: collapse;
             width: 80%;
             margin: 20px auto;
@@ -24,33 +24,20 @@
             text-align: center;
         }
 
-        th {
+        th{
             background-color: #f2f2f2;
         }
-
-        h2 {
+        h2{
             text-align: center;
         }
-
-        .success {
+        .success{
             color: green;
             text-align: center;
         }
     </style>
 </head>
 <body>
-<!-- Thông báo thành công -->
-<c:if test="${param.success == 'create'}">
-    <p class="success">Thêm order thành công!</p>
-</c:if>
-<c:if test="${param.success == 'update'}">
-    <p class="success">Cập nhật order thành công!</p>
-</c:if>
-<c:if test="${param.success == 'delete'}">
-    <p class="success">Xóa order thành công!</p>
-</c:if>
-
-<h2>Danh sách Beer Orders</h2>
+<h2>Danh sach Beer Orders</h2>
 <table>
     <thead>
     <tr>
