@@ -12,19 +12,18 @@
   <meta charset="UTF-8">
 </head>
 <body>
-<h2>Nhập ID Order cần xóa</h2>
-<form action="delete" method="get">
-  <label>Order ID:</label>
-  <input type="number" name="id" required>
-  <input type="submit" value="Xóa Order">
-</form>
+<h2>Xóa Beer Order</h2>
 
-<!-- Hiển thị thông báo lỗi nếu servlet set attribute "error" -->
 <c:if test="${not empty error}">
-  <p style="color:red;">${error}</p>
+  <div style="color:red;">${error}</div>
 </c:if>
 
-<!-- Nút quay lại danh sách -->
-<button type="button" onclick="window.location.href='views'">Quay lại danh sách</button>
+<form action="delete" method="post">
+  <label>Order ID cần xóa:</label>
+  <input type="text" name="orderId" required><br><br>
+
+  <input type="submit" value="Xóa Order">
+  <button type="button" onclick="window.location.href='views'">Quay lại</button>
+</form>
 </body>
 </html>

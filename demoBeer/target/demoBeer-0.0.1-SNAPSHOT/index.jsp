@@ -36,21 +36,37 @@
             color: green;
             text-align: center;
         }
+
+        .actions {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .actions button {
+            margin: 0 5px;
+        }
     </style>
 </head>
 <body>
-<!-- Thông báo thành công -->
-<c:if test="${param.success == 'create'}">
-    <p class="success">Thêm order thành công!</p>
-</c:if>
-<c:if test="${param.success == 'update'}">
-    <p class="success">Cập nhật order thành công!</p>
-</c:if>
-<c:if test="${param.success == 'delete'}">
-    <p class="success">Xóa order thành công!</p>
+<h2>Danh sách Beer Orders</h2>
+
+<c:if test="${not empty param.success}">
+    <div class="success">
+        <c:choose>
+            <c:when test="${param.success eq 'create'}">Thêm order thành công!</c:when>
+            <c:when test="${param.success eq 'edit'}">Cập nhật order thành công!</c:when>
+            <c:when test="${param.success eq 'delete'}">Xóa order thành công!</c:when>
+        </c:choose>
+    </div>
 </c:if>
 
-<h2>Danh sách Beer Orders</h2>
+<div class="actions">
+    <button type="button" onclick="window.location.href='create'">Thêm Order</button>
+    <button type="button" onclick="window.location.href='edit'">Cập nhật Order</button>
+    <button type="button" onclick="window.location.href='delete'">Xóa Order</button>
+    <button type="button" onclick="window.location.href='views'">Xem Orders</button>
+</div>
+
 <table>
     <thead>
     <tr>
