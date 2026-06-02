@@ -18,13 +18,13 @@
     <input type="text" name="customerId" required><br><br>
 
     <label>Customer Name:</label>
-    <input type="text" name="customerName" required><br><br>
+    <input type="text" name="customerName" pattern="^[a-zA-Z ]+$" required><br><br>
 
     <label>Beer Name:</label>
-    <input type="text" name="beerName" required><br><br>
+    <input type="text" name="beerName" pattern="^[a-zA-Z ]+$" required><br><br>
 
     <label>Quantity:</label>
-    <input type="number" name="quantity" min="1" required><br><br>
+    <input type="number" name="quantity" min="1" step="1" required><br><br>
 
     <input type="submit" value="Thêm Order">
     <button type="button" onclick="window.location.href='views'">Quay lại</button>
