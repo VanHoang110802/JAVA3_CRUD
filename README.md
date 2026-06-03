@@ -1,0 +1,7 @@
+- ``` Spring Boot DevTools ```  Tự động reload khi code thay đổi, tiện cho dev.
+- ``` Spring Web ``` Dùng để tạo REST API hoặc ứng dụng web.
+- ``` H2 Database ``` CSDL nhẹ, chạy trong bộ nhớ — phù hợp để test nhanh.
+- ``` Lombok ``` Giúp giảm code lặp (getter/setter, constructor…).
+- ``` Spring Data JPA ``` Dễ thao tác với database thật sau này.
+- ``` Spring Security ``` Bảo mật cho API hoặc web app.
+- ``` Spring Boot Test ``` Hỗ trợ viết unit test, integration test.
